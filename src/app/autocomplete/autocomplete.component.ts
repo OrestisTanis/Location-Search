@@ -71,6 +71,9 @@ export class AutocompleteComponent implements OnInit {
 
         // Show autocomplete options div
         this.autocompleteOptionsShow = true;
+      
+        // No error on successful request
+        this.serviceError = null;
       },
       error =>{
         // Handle request error
