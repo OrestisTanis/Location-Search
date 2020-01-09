@@ -1,6 +1,7 @@
 # Location Search
 (This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.)
-This is a simple front-end application developed with Angular 8 and Bootstrap 4, where:
+
+A simple front-end application developed with Angular 8 and Bootstrap 4, where:
 - Users can search for a specific location by typing the desired location's name in the input field.
 - The app sends an http get request to a restful web service and and if the query is successful, the response data is displayed
 on the client.
