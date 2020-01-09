@@ -1,0 +1,38 @@
+<form #locationForm="ngForm" (ngSubmit)="onClickSearch(locationForm)" (clickOutside)="onClickOutsideOfForm(5)" >     
+    <!--            -->
+    <div class="form-group">
+        <label for="location">What place are you looking for?</label>
+        
+        <!-- BEGIN TEXTBOX -->
+        <div class="input-group">
+            <img src="assets/img/magnifying-glass-icon.png" alt="magnifying-glass-icon" class="placeholder-icon">
+            <input type="text" class="form-control"  required #searchTextBox minlength="2" [(ngModel)]="locationName" name="locationName" (ngModelChange)="onInputChange()" (focus)="onInputFocus()">
+            <img src="assets/img/voice-icon.png" alt="voice-search-icon" class="placeholder-icon">
+        </div> 
+        <!-- END TEXTBOX -->
+        
+        <!-- BEGIN AUTOCOMPLETE OPTIONS -->
+        <div *ngIf="locationArr.length > 0 && autocompleteOptionsShow" id="autocompleteOptionsWrapper" style="border: 1px solid gray">                        
+            <ng-container *ngFor="let location of locationArr">                
+                <p class="button" id="autocompleteOptions" style="background-color: white; padding: 5px; margin: 0" (click)="onClickOption(location.name)">{{location.name}}</p>           
+            </ng-container>                                           
+        </div>
+        <!-- END AUTOCOMPLETE OPTIONS -->
+    </div>     
+
+     <!-- SERVICE ERROR -->
+     <div *ngIf="serviceError" class="alert alert-danger" role="alert">
+        {{serviceError}}
+    </div>
+   <!-- END OF SERVICE ERROR -->
+    
+    <!-- LANGUAGE ERROR -->
+    <div *ngIf="langError" class="alert alert-secondary" role="alert" id="langError">
+        {{langError}}
+    </div>
+   <!-- END OF LANGUAGE ERROR -->                
+    
+    <!-- BEGIN SEARCH BUTTON -->
+    <button type="submit" id="submit" #submit class="btn btn-primary-color" [disabled]="!submitButtonEnabled" [ngClass]="{'center' : !(screenWidth > 992)}">Click to Search</button>
+    <!-- END SEARCH BUTTON -->
+</form>

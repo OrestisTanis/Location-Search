@@ -1,0 +1,19 @@
+#logo {
+    width: 80px;   
+}
+// Class applied to the logo image for centering
+.center {
+    display: block;
+    margin: 0 auto;      
+}
+
+#banner {   
+    border: 1px solid black;
+    // Height for small and medium screen sizes (default)
+    height: 100px;
+    // Modifies height for large screen sizes (>992px)
+    @media (min-width: 992px) { 
+        height: 400px;               
+    }
+}
+
