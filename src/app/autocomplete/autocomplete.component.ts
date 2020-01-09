@@ -100,7 +100,7 @@ export class AutocompleteComponent implements OnInit {
     // Hide autocomplete options div
     this.autocompleteOptionsShow = false;     
 
-    // Trim whitespaces from the beginning of the string 
+    // Trim whitespaces from the beginning and the end of the string 
     const trimmedLocationName = this.locationName.trim();   
     
     // Disable submit button
