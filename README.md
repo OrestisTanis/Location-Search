@@ -7,7 +7,7 @@ A simple front-end application developed with Angular 8 and Bootstrap 4, where:
 on the client.
 - There is an autocomplete feature on successful requests.
 - Requests to the service are sent only if 1 second passes without user input being modified in order to minimize calls to the service.
-- If a user clicks on one of the available autocomplete options and then clicks on "Click To Search" button, he is redirected to Google search with a search query equal to the selected location's name
+- If a user clicks on one of the available autocomplete options and then clicks on "Click To Search" button, he is redirected to Google.com with a search query equal to the selected location's name
 
 ## Features 
 Location Search is an Angular project which uses:
